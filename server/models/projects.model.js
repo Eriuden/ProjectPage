@@ -1,11 +1,16 @@
 const mongoose = require("mongoose")
 
 const projectSchema = new mongoose.Schema({
+
+    userId: {
+        type: String,
+        required: true
+    },
     picture: {
         type:String,
     },
 
-    ProjectName: {
+    projectName: {
         type: String,
         required: true,
     },
@@ -16,7 +21,7 @@ const projectSchema = new mongoose.Schema({
         maxLength: 1000,
     },
 
-    complétion: {
+    completion: {
         type: String,
         trim: true,
         maxLenth: 3000,
