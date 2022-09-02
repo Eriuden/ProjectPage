@@ -6,7 +6,7 @@ const fs = require("fs")
 const { promisify } = require("util")
 const pipeline = promisify(require("stream").pipeline)
 
-module.exports.readBook = (req,res) => {
+module.exports.readProject = (req,res) => {
     ProjectModel.find((err, docs) => {
         if(!err) res.send(docs)
         else console.log("error to get data:" + err)
